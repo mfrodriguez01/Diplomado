@@ -1,0 +1,1 @@
+json.partial! "history_sessions/history_session", history_session: @history_session

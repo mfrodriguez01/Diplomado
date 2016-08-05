@@ -1,0 +1,3 @@
+class HistorySession < ActiveRecord::Base
+  belongs_to :user
+end

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @history_session.date %>
+</p>
+
+<p>
+  <strong>Hour:</strong>
+  <%= @history_session.hour %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @history_session.state %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @history_session.user %>
+</p>
+
+<%= link_to 'Edit', edit_history_session_path(@history_session) %> |
+<%= link_to 'Back', history_sessions_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@history_session) do |f| %>
+  <% if @history_session.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@history_session.errors.count, "error") %> prohibited this history_session from being saved:</h2>
+
+      <ul>
+      <% @history_session.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :hour %><br>
+    <%= f.time_select :hour %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.check_box :state %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -19,7 +19,7 @@
         <td><%= history_session.date %></td>
         <td><%= history_session.hour %></td>
         <td><%= history_session.state %></td>
-        <td><%= history_session.user %></td>
+        <td><%= history_session.user.name %></td>
         <td><%= link_to 'Show', history_session %></td>
         <td><%= link_to 'Edit', edit_history_session_path(history_session) %></td>
         <td><%= link_to 'Destroy', history_session, method: :delete, data: { confirm: 'Are you sure?' } %></td>

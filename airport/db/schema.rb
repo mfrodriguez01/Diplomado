@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160805042532) do
+ActiveRecord::Schema.define(version: 20160805173054) do
 
   create_table "history_sessions", force: :cascade do |t|
     t.date     "date"
@@ -39,10 +39,10 @@ ActiveRecord::Schema.define(version: 20160805042532) do
     t.string   "telephone"
     t.string   "email"
     t.string   "user_name"
-    t.string   "password"
+    t.string   "password_digest"
     t.integer  "role_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   add_index "users", ["role_id"], name: "index_users_on_role_id"

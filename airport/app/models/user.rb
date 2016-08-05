@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
-
-  has_secure_password
   belongs_to :role
   has_many :history_sessions
+
+  has_secure_password
 
 	validates :name, presence: true
 	validates :last_name, presence: true

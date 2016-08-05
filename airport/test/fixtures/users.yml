@@ -7,7 +7,7 @@ one:
   telephone: MyString
   email: MyString
   user_name: MyString
-  password: MyString
+  password_digest: MyString
   role_id: 
 
 two:
@@ -17,5 +17,5 @@ two:
   telephone: MyString
   email: MyString
   user_name: MyString
-  password: MyString
+  password_digest: MyString
   role_id: 

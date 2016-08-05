@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  date: 2016-08-04
-  hour: 2016-08-04 23:25:32
+  date: 2016-08-05
+  hour: 2016-08-05 12:30:54
   state: false
   user_id: 
 
 two:
-  date: 2016-08-04
-  hour: 2016-08-04 23:25:32
+  date: 2016-08-05
+  hour: 2016-08-05 12:30:54
   state: false
   user_id: 

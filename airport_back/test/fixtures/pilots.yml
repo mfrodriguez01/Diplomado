@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: pilots
+#
+#  id             :integer          not null, primary key
+#  name           :string
+#  last_name      :string
+#  identification :string
+#  telephone      :string
+#  email          :string
+#  experience     :integer
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  last_name: MyString
+  identification: MyString
+  telephone: MyString
+  email: MyString
+  experience: 1
+
+two:
+  name: MyString
+  last_name: MyString
+  identification: MyString
+  telephone: MyString
+  email: MyString
+  experience: 1

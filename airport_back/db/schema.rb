@@ -11,7 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160804185010) do
+ActiveRecord::Schema.define(version: 20160806000225) do
+
+  create_table "airplanes", force: :cascade do |t|
+    t.string   "number"
+    t.string   "model"
+    t.integer  "capacity"
+    t.integer  "size"
+    t.boolean  "state",      default: true
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "pilots", force: :cascade do |t|
+    t.string   "name"
+    t.string   "last_name"
+    t.string   "identification"
+    t.string   "telephone"
+    t.string   "email"
+    t.integer  "experience"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "programmings", force: :cascade do |t|
+    t.integer  "airplane_id"
+    t.integer  "track_id"
+    t.integer  "pilot_id"
+    t.date     "date"
+    t.time     "hour"
+    t.string   "origin"
+    t.string   "destination"
+    t.integer  "duration"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "programmings", ["airplane_id"], name: "index_programmings_on_airplane_id"
+  add_index "programmings", ["pilot_id"], name: "index_programmings_on_pilot_id"
+  add_index "programmings", ["track_id"], name: "index_programmings_on_track_id"
 
   create_table "tokens", force: :cascade do |t|
     t.string   "token"
@@ -19,6 +57,14 @@ ActiveRecord::Schema.define(version: 20160804185010) do
     t.integer  "number_of_request", default: 0
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+  end
+
+  create_table "tracks", force: :cascade do |t|
+    t.string   "code"
+    t.decimal  "long"
+    t.boolean  "state",      default: true
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
 end

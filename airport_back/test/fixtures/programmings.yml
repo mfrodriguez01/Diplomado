@@ -1,0 +1,38 @@
+# == Schema Information
+#
+# Table name: programmings
+#
+#  id          :integer          not null, primary key
+#  airplane_id :integer
+#  track_id    :integer
+#  pilot_id    :integer
+#  date        :date
+#  hour        :time
+#  origin      :string
+#  destination :string
+#  duration    :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  airplane_id: 
+  track_id: 
+  pilot_id: 
+  date: 2016-08-05
+  hour: 2016-08-05 19:02:25
+  origin: MyString
+  destination: MyString
+  duration: 1
+
+two:
+  airplane_id: 
+  track_id: 
+  pilot_id: 
+  date: 2016-08-05
+  hour: 2016-08-05 19:02:25
+  origin: MyString
+  destination: MyString
+  duration: 1

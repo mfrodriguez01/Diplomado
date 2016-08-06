@@ -8,9 +8,10 @@ class SessionsController < ApplicationController
 	p @session 
 	if @session.authenticate
 		session['user_id'] = @session.current_user.id
+		
 		redirect_to users_path, notice: 'Bienvenido'
 	else
-		render :new
+		render :new, notice: 'Error'
 	end
 
   end

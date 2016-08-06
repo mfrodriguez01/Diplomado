@@ -2,8 +2,13 @@ Rails.application.routes.draw do
   resources :users
   resources :history_sessions
   resources :users
+
   get 'sessions/new'
-  
+
+  resources :programmings
+  resources :airplanes
+  resources :pilots  
+  resources :tracks    
   resources :roles
 
   get '/login', to: 'sessions#new'

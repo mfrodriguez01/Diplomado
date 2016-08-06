@@ -1,0 +1,49 @@
+<%= form_for(@programming) do |f| %>
+  <% if @programming.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@programming.errors.count, "error") %> prohibited this programming from being saved:</h2>
+
+      <ul>
+      <% @programming.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :airplane_id %><br>
+    <%= f.collection_select :airplane_id, Airplane.all, :id, :number %>
+  </div>
+  <div class="field">
+    <%= f.label :track_id %><br>
+    <%= f.collection_select :track_id, Track.all, :id, :code %>
+  </div>
+  <div class="field">
+    <%= f.label :pilot_id %><br>
+     <%= f.collection_select :pilot_id, Pilot.all, :id, :name %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :hour %><br>
+    <%= f.time_select :hour %>
+  </div>
+  <div class="field">
+    <%= f.label :origin %><br>
+    <%= f.text_field :origin %>
+  </div>
+  <div class="field">
+    <%= f.label :destination %><br>
+    <%= f.text_field :destination %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.number_field :duration %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Airplane:</strong>
+  <%= @programming.airplane.number %>
+</p>
+
+<p>
+  <strong>Track:</strong>
+  <%= @programming.track.code %>
+</p>
+
+<p>
+  <strong>Pilot:</strong>
+  <%= @programming.pilot.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @programming.date %>
+</p>
+
+<p>
+  <strong>Hour:</strong>
+  <%= @programming.hour %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @programming.origin %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @programming.destination %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @programming.duration %>
+</p>
+
+<%= link_to 'Edit', edit_programming_path(@programming) %> |
+<%= link_to 'Back', programmings_path %>

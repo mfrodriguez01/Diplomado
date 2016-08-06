@@ -11,4 +11,7 @@
 #
 
 class Track < ActiveRecord::Base
+
+	validates :code, presence: true, length: 4..10	
+	validates :long, presence: true
 end

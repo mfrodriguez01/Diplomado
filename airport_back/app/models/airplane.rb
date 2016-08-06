@@ -13,4 +13,6 @@
 #
 
 class Airplane < ActiveRecord::Base
+	validates :number, presence: true, length: 4..10	
+	validates :capacity, presence: true
 end

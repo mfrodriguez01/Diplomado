@@ -8,11 +8,11 @@
 </head>
 <body>
 <div class="container">
+	
 	<% if @current_user %>
 		<%= @current_user.name %>
+	
 		<%= link_to 'Salir', logout_path, class: 'btn btn-danger' %>
-	<% else %>
-		<%= link_to 'Ingresar', login_path, class: 'btn btn-primary' %>
 	<% end %>
 
 <%= yield %>

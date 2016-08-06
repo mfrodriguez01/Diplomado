@@ -19,4 +19,11 @@ class Programming < ActiveRecord::Base
   belongs_to :airplane
   belongs_to :track
   belongs_to :pilot
+
+  validates :origin, presence: true  
+  validates :destination, presence: true  
+  validates :date, presence: true
+  validates :hour, presence: true
+
+
 end

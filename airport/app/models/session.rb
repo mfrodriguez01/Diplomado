@@ -12,7 +12,6 @@ class Session
 
 	def current_user
  		User.find_by(user_name: user_name)
- 		User.find_by(user_name: user_name)
 	end
 
 end

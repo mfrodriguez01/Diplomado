@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
 	
 	if @session.authenticate
 		session['user_id'] = @session.current_user.id
-		
 		redirect_to users_path, notice: 'Bienvenido'
 	else
 		render :new, notice: 'Error'

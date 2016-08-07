@@ -10,22 +10,38 @@
 <div class="container">
 
 <% if @current_user %>
-
+ <%  @a =  @current_user.role.name
+ p @a
+    if @a == 'Admin' %>
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
       <div class="nav navbar-nav">
         <a class="nav-item nav-link active" href="/users">Users <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link" href="/airplanes">Airplanes</a>
         <a class="nav-item nav-link" href="/pilots">Pilots</a>        
         <a class="nav-item nav-link" href="/tracks">Tracks</a>
-        <a class="nav-item nav-link" href="/programmings">Programming</a>
+        <a class="nav-item nav-link" href="/programmings">Programming</a> 
         <form class="form-inline pull-xs-right">
           <div > 
+            <%= @current_user.name %>
             <%= link_to 'Salir', logout_path, class: 'btn btn-danger' %>
           </div>
         </form>   
       </div>
     </nav>
 
+    <% else %>
+       <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+          <div class="nav navbar-nav">
+            <a class="nav-item nav-link active" href="/programmings">Programming<span class="sr-only">(current)</span></a>
+            <form class="form-inline pull-xs-right">
+              <div > 
+                <%= @current_user.name %>
+                <%= link_to 'Salir', logout_path, class: 'btn btn-danger' %>
+              </div>
+            </form>   
+          </div>
+        </nav>
+    <% end %>
   <% end %>
 <%= yield %>
 </div>

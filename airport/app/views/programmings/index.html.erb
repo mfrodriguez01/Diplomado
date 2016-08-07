@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Programmings</h1>
+<h2>Listing Programmings</h2>
 
-<table>
-  <thead>
+<table class ="table-sm">
+ <thead class="thead-inverse">
     <tr>
       <th>Airplane</th>
       <th>Track</th>
@@ -20,9 +20,9 @@
   <tbody>
     <% @programmings.each do |programming| %>
       <tr>
-        <td><%= programming.airplane %></td>
-        <td><%= programming.track %></td>
-        <td><%= programming.pilot %></td>
+        <td><%= programming.airplane.number %></td>
+        <td><%= programming.track.code %></td>
+        <td><%= programming.pilot.name %></td>
         <td><%= programming.date %></td>
         <td><%= programming.hour %></td>
         <td><%= programming.origin %></td>

@@ -14,6 +14,9 @@
   <strong>Number of request:</strong>
   <%= @token.number_of_request %>
 </p>
-
+<p>
+  <strong>State:</strong>
+  <%= @token.state %>
+</p>
 <%= link_to 'Edit', edit_token_path(@token) %> |
 <%= link_to 'Back', tokens_path %>

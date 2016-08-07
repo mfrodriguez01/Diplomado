@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
   def create
   	@session = Session.new(session_params)
 	p @session 
+	
 	if @session.authenticate
 		session['user_id'] = @session.current_user.id
 		
@@ -25,5 +26,5 @@ class SessionsController < ApplicationController
   private 
 	  def session_params
 	      params.require(:session).permit(:user_name, :password)
-	    end
+	   end
 end

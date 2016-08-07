@@ -1,4 +1,5 @@
 class ProgrammingsController < ApplicationController
+  before_action :logged_in?
   before_action :set_programming, only: [:show, :edit, :update, :destroy]
 
   # GET /programmings

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160806000225) do
+ActiveRecord::Schema.define(version: 20160807015745) do
 
   create_table "airplanes", force: :cascade do |t|
     t.string   "number"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20160806000225) do
     t.integer  "number_of_request", default: 0
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+    t.boolean  "state"
   end
 
   create_table "tracks", force: :cascade do |t|

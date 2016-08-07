@@ -1,4 +1,5 @@
 class HistorySessionsController < ApplicationController
+  before_action :logged_in?
   before_action :set_history_session, only: [:show, :edit, :update, :destroy]
 
   # GET /history_sessions

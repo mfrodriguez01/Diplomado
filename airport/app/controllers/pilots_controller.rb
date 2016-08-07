@@ -1,4 +1,5 @@
 class PilotsController < ApplicationController
+  before_action :logged_in?
   before_action :set_pilot, only: [:show, :edit, :update, :destroy]
 
   # GET /pilots

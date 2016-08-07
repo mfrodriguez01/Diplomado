@@ -13,8 +13,13 @@ class ApplicationController < ActionController::Base
   	if current_token.nil?
   		render json: {error: 'Token invalid'}  		
 	 else
-	 	current_token.number_of_request += 1
-	 	current_token.save
+      if current_token.state == false
+        render json: {error: 'Access Token not active'}   
+        
+      else
+	 	     current_token.number_of_request += 1
+	 	     current_token.save
+       end
   	end
 end
 

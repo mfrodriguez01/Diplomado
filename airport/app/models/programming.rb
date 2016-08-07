@@ -25,10 +25,33 @@ class Programming
 		end
 	end
 
-	def self.find(id_track)
-		response = HTTParty.get(self.path("/#{id_track}"), headers: { 'token' => TOKEN })
+	def airplane
+
+		Airplane.find(self.airplane_id)
+		#response = HTTParty.get('http://localhost:3000/airplanes/'+self.airplane_id.to_s+'.json', headers: { 'token' => TOKEN })
+		#elem = new(response.parsed_response)
+	end
+
+	def track
+		Track.find(self.track_id)
+		#response = HTTParty.get('http://localhost:3000/tracks/'+self.track_id.tp_s+'.json', headers: { 'token' => TOKEN })
+		#elem = new(response.parsed_response)
+	end
+
+	def pilot
+		Pilot.find(self.pilot_id)
+		#response = HTTParty.get('http://localhost:3000/pilots/'+self.pilot_id.to_s+'.json', headers: { 'token' => TOKEN })
+		#elem = new(response.parsed_response)
+	end
+
+
+
+	def self.find(id_programming)
+		response = HTTParty.get(self.path("/#{id_programming}"), headers: { 'token' => TOKEN })
 		elem = new(response.parsed_response)
 	end
+
+	
 
 	def update
 		HTTParty.put(self.class.path("/#{id}"), query: to_json, headers: { 'token' => TOKEN })

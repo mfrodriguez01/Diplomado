@@ -68,7 +68,7 @@ class Programming
 
 	def to_json
 		{ 
-			track: {
+			programming: {
 				id: self.id,
 				airplane_id: self.airplane_id,
 				track_id: self.track_id,
@@ -77,8 +77,7 @@ class Programming
 				hour: self.hour,
 				origin: self.origin,
 				destination: self.destination,				
-				duration: self.duration,
-
+				duration: self.duration
 			}
 		}
 	end

@@ -20,6 +20,8 @@ class ProgrammingsController < ApplicationController
 
   # GET /programmings/1/edit
   def edit
+    @programming.date = @programming.date.to_date
+    @programming.hour = @programming.hour.to_time
   end
 
   # POST /programmings
@@ -74,6 +76,10 @@ class ProgrammingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def programming_params
-      params.require(:programming).permit(:airplane_id, :track_id, :pilot_id, :date, :hour, :origin, :destination, :duration)
+      programming = params[:programming]
+      date = Date.new(programming["date(1i)"].to_i, programming["date(2i)"].to_i, programming["date(3i)"].to_i)      
+      hour = Time.new(programming["hour(1i)"].to_i, programming["hour(2i)"].to_i, programming["hour(3i)"].to_i)
+      params.require(:programming).permit(:airplane_id, :track_id, :pilot_id, :origin, :destination, :duration).merge( date: date.to_s, hour: hour.to_s )
+
     end
 end
